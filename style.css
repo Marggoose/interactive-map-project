@@ -1,0 +1,125 @@
+/* Общие стили страницы */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+  /* Заголовок */
+h1 {
+    margin: 20px 0;
+    font-size: 28px;
+    color: #2c3e50;
+}
+
+  /* Контейнер карты */
+#map {
+    width: 90vw;
+    height: 80vh;
+    max-width: 1200px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    }
+
+  /* Всплывающие окна (popup) */
+.leaflet-popup-content {
+    font-size: 14px;
+    line-height: 1.4;
+    }
+
+.leaflet-popup-content img {
+    margin-top: 5px;
+    border-radius: 6px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+  /* Для responsiveness */
+@media (max-width: 768px) {
+    h1 {
+    font-size: 22px;
+    }
+
+    #map {
+    width: 95vw;
+    height: 70vh;
+    }
+}
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 22px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+#markerForm label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#markerForm input,
+#markerForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+#markerForm button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#markerForm button:hover {
+    background: #2980b9;
+}
