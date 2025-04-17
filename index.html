@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Интерактивная карта школы</title>
+
+  <!-- Leaflet (локально) -->
+  <link rel="stylesheet" href="libs/leaflet/leaflet.css" />
+
+  <!-- Собственные стили -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Шапка сайта -->
+  <header>
+    <div class="container">
+      <h1>Интерактивная карта школы</h1>
+      <p>Изучайте план школы, добавляйте свои метки и стройте маршруты!</p>
+    </div>
+  </header>
+
+  <!-- Основной контент -->
+  <main>
+    <div class="container">
+      <!-- Карта -->
+      <div id="map"></div>
+
+      <!-- Блок управления (дополнительно) -->
+      <section id="controls">
+        <!-- Тут можно добавить кнопки, фильтры и прочее -->
+      </section>
+    </div>
+  </main>
+
+  <!-- Модальное окно для добавления метки -->
+  <div id="markerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Добавить метку</h2>
+      <form id="markerForm">
+        <label for="markerName">Название:</label>
+        <input type="text" id="markerName" required />
+
+        <label for="markerDesc">Описание:</label>
+        <textarea id="markerDesc" rows="3" required></textarea>
+
+        <button type="submit">Добавить</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Подвал -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Интерактивная карта школы | Проект учебной практики</p>
+    </div>
+  </footer>
+
+  <!-- Скрипты -->
+  <script src="libs/leaflet/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
